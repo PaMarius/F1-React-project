@@ -1,7 +1,30 @@
+@font-face {
+  font-family: F1Bold;
+  src: url("./Constant/fonts/Formula1-Bold_web_0.ttf");
+}
+@font-face {
+  font-family: F1Regular;
+  src: url("./Constant/fonts/Formula1-Regular_web_0.ttf");
+}
+@font-face {
+  font-family: F1Wide;
+  src: url("./Constant/fonts/Formula1-Wide_web_0.ttf");
+}
+
 .cards {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+  }
+
+  .formula1-title {
+    text-align: center;
+    font-size: 40px;
+    margin: 20px;
+    font-family: F1bold;
+    background: linear-gradient(rgb(253, 43, 43), rgb(157, 4, 4));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }

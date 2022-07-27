@@ -33,7 +33,7 @@
   
   .driver-card {
     width: 400px;
-    height: 400px;
+    height: 100%;
     border-top: 2px black solid;
     border-right: 2px black solid;
     border-top-right-radius: 15px;
@@ -45,7 +45,7 @@
     transition: transform 0.8s;
     transition-delay: 0s;
     transform-style: preserve-3d;
-    cursor: pointer;
+    
   }
   
   .flip-card-back {
@@ -112,6 +112,55 @@
     font-size: 2.652rem;
   }
   
+  .score {
+    display: flex;
+    gap: 10px;
+  }
+
+  .add-points-bttn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    height: 100%;
+    padding-right: 2px;
+  }
+
+  .increase-points {
+    --b: 4px; 
+  width: calc(100% - 4px);
+  height: calc(40%-5px);
+  margin-top: 5px;
+  aspect-ratio: 1;
+  border: 2px solid #000; 
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#000 90deg,#fff 0) 
+    calc(100% + var(--b)/2) calc(100% + var(--b)/2)/
+    calc(50%  + var(--b))   calc(50%  + var(--b));
+  display: inline-block;
+  cursor: pointer;
+  }
+
+  .decrease-points {
+    --b: 4px; 
+  width: calc(100% - 4px);
+  height: calc(40%-5px);
+  margin-bottom: 5px;
+  aspect-ratio: 1;
+  border: 2px solid #000; 
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#000 90deg,#fff 0) 
+    calc(100% + var(--b)/2) calc(100% + var(--b)/2)/
+    calc(50%  + var(--b))   calc(50%  + var(--b));
+  display: inline-block;
+  cursor: pointer;
+  }
+  
+  .points {
+    display: flex;
+    align-items: center;
+    height: 75px;
+  }
   .driver-points {
     font-family: F1Wide;
     font-size: 18px;
@@ -122,9 +171,9 @@
     text-align: center;
   }
   
-  .points {
+  .points-text {
+    justify-content: center;
     padding: 2px;
-    margin-top: 5px;
     font-size: 12px;
     width: 75px;
     border-radius: 15px;
@@ -220,11 +269,11 @@
   }
   
   /* FLIP CARD EFFECT */
-  .driver-card:hover {
+  /* .driver-card:hover {
     transform: rotateY(180deg);
     transition-delay: 1s;
   }
-  
+   */
   /* CHANGE SCORE BUTTON */
   .change-score {
     display: flex;
