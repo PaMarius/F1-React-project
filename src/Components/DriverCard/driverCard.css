@@ -1,14 +1,16 @@
+
+
 @font-face {
     font-family: F1Bold;
-    src: url("../Constant/fonts/Formula1-Bold_web_0.ttf");
+    src: url("../../Constant/fonts/Formula1-Bold_web_0.ttf");
   }
   @font-face {
     font-family: F1Regular;
-    src: url("../Constant/fonts/Formula1-Regular_web_0.ttf");
+    src: url("../../Constant/fonts/Formula1-Regular_web_0.ttf");
   }
   @font-face {
     font-family: F1Wide;
-    src: url("../Constant/fonts/Formula1-Wide_web_0.ttf");
+    src: url("../../Constant/fonts/Formula1-Wide_web_0.ttf");
   }
   @media only screen and (max-width: 896px) {
     .cards {
@@ -45,9 +47,19 @@
     transition: transform 0.8s;
     transition-delay: 0s;
     transform-style: preserve-3d;
-    
+  
   }
   
+  .driver-card:hover {
+    border-color: var(--team-color)
+  }
+
+  /* .show-column {
+    display: flex;
+    flex-direction: column;
+    .driver-card < 
+  } */
+
   .flip-card-back {
     position: absolute;
     top: 0px;
@@ -103,7 +115,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    background-image: url("plus-x1.png");
+    background-image: url("../../Constant/plus-x1.png");
   }
   
   /* Every props from card */
@@ -147,9 +159,9 @@
   height: calc(40%-5px);
   margin-bottom: 5px;
   aspect-ratio: 1;
-  border: 2px solid #000; 
+  /* border: 2px solid #000;  */
   background:
-    conic-gradient(from 90deg at var(--b) var(--b),#000 90deg,#fff 0) 
+    conic-gradient(from 90deg at var(--b) var(--b),#000 180deg,#fff 0) 
     calc(100% + var(--b)/2) calc(100% + var(--b)/2)/
     calc(50%  + var(--b))   calc(50%  + var(--b));
   display: inline-block;
@@ -185,7 +197,7 @@
     justify-content: center;
     font-size: 17px;
     padding-left: 15px;
-    border-left: 5px solid #3671c6;
+    border-left: 5px solid var(--team-color);
     -webkit-animation-duration: 0.1s;
     animation-duration: 0.1s;
   }

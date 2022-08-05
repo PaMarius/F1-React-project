@@ -11,6 +11,13 @@
   src: url("./Constant/fonts/Formula1-Wide_web_0.ttf");
 }
 
+.nav-bar {
+  background-color: red;
+  height: 100px;
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+}
+
 .cards {
     width: 100%;
     display: flex;
@@ -28,3 +35,5 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  
